@@ -17,8 +17,12 @@ books = [
 rx_article = re.compile(r'^(the|a|an)\s+', re.I)  # <1>
 
 def strip_articles(title):  # <2>
+    print("before:", title)
     stripped_title = rx_article.sub('', title.lower())  # <3>
+    print("after:", stripped_title)
     return stripped_title
 
 for book in sorted(books, key=strip_articles):  # <4>
     print(book)
+print()
+

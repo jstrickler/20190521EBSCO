@@ -10,11 +10,13 @@ if sys.version_info.major == 3 and sys.version_info.minor >= 6:
     info = 2093
     result = 38293892
 
-    print(f"Name is [{name:<10s}]")  # <1>
+    print(f"Name is [{name:10s}]")  # <1>
+    print("Name is [{:10s}]".format(name))  # exactly the same
+    print("Name is [%-10s]" % (name))
     print(f"Name is [{name:>10s}]")  # <2>
     print(f"count is {count:03d} avg is {avg:.2f}")  # <3>
 
-    print(f"info is {info} {info:d} {info:o} {info:x}".format(info))  # <4>
+    print(f"info is {info} {info:d} {info:o} {info:x} {info:b}")  # <4>
 
     print(f"${result:,d}".format(result))  # <5>
 

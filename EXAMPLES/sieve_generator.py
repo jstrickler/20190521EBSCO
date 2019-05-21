@@ -13,4 +13,16 @@ def next_prime(limit):
 
 np = next_prime(200)  # <4>
 for prime in np:  # <5>
+    # prime = next(np)
     print(prime, end=' ')
+print()
+
+def spam():
+    yield "A"
+    yield "B"
+    yield "C"
+    yield "D"
+
+for letter in spam():
+    print(letter)
+print()
