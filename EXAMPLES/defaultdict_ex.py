@@ -15,3 +15,4 @@ dd['eggs'] = 22
 print(dd['spam'])  # <3>
 print(dd['eggs'])
 print(dd['foo'])  # <4>
+

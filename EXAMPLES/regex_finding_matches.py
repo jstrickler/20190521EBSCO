@@ -19,7 +19,7 @@ print()
 m = re.search(pattern, s)  # <3>
 print(m)
 if m:
-    print("Found:", m.group(0))  # <4>
+    print("Found:", m.group(), m.span())  # <4>
 print()
 
 for m in re.finditer(pattern, s):  # <5>
@@ -28,3 +28,8 @@ print()
 
 matches = re.findall(pattern, s)  # <6>
 print("matches:", matches)
+
+matches = [m.group(0) for m in re.finditer(pattern, s)]
+print(matches)
+
+print(list(re.finditer(pattern, s)))

@@ -24,6 +24,9 @@ data = [  # <2>
     airports,
 ]
 
+pprint(data)
+print('\n')
+
 with open('../TEMP/pickled_data.pic', 'wb') as pic_out:  # <3>
     pickle.dump(data, pic_out)  # <4>
 
