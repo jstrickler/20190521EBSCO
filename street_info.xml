@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<streets>
+  <street kind="St">
+    <number>123</number>
+    <name>Elm</name>
+  </street>
+  <street kind="Way">
+    <number>456</number>
+    <name>Shark</name>
+  </street>
+  <street kind="Parkway">
+    <number>9283</number>
+    <name>Wombat</name>
+  </street>
+</streets>

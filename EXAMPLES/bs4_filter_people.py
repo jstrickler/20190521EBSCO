@@ -10,7 +10,7 @@ def separator():
 
 with open('../DATA/people.xml') as people_in:
     soup = bs4.BeautifulSoup(people_in, 'lxml')
-    
+
 for person in soup.findAll('person'):
     print(person.string)
 separator()
@@ -43,3 +43,5 @@ separator()
 for tag in soup.findAll(text=re.compile(r'wacker', re.IGNORECASE)):
     print(tag)
 separator()
+
+# soup.findAll(id='123-32-393-3-3')

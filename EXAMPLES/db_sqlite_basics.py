@@ -2,9 +2,13 @@
 
 import sqlite3
 
+#    ":memory:"
 with sqlite3.connect("../DATA/presidents.db") as s3conn:  # <1>
 
     s3cursor = s3conn.cursor()  # <2>
+
+    c2 = s3conn.cursor()
+    c3 = s3conn.cursor()
 
     # select first name, last name from all presidents
     s3cursor.execute('''

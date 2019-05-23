@@ -30,6 +30,8 @@ def encode(obj):  # <4>
         return obj.ctime()  # <6>
     elif isinstance(obj, Parrot):  # <7>
         return {'name': obj.name, 'color': obj.color}  # <8>
+    elif hasattr('tostring'):
+        return obj.tostring()
     return obj  # <9>
 
 
@@ -41,3 +43,4 @@ data = {  # <10>
 }
 
 print(json.dumps(data, default=encode, indent=4))  # <11>
+# print(json.dumps(data, indent=4))  # <11>
